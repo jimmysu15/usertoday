@@ -1,7 +1,7 @@
 /* @import url(http://fonts.googleapis.com/css?family=Satisfy);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,400italic);
 @import url(http://fonts.googleapis.com/css?family=Oswald:300,400,700); */
-@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css); */
  
 body {
     overflow-x: hidden;
@@ -237,7 +237,13 @@ li {
 	background: linear-gradient(#373a47 20%, transparent 20%, transparent 40%, #373a47 40%, #373a47 60%, transparent 60%, transparent 80%, #373a47 80%);
 	content: '';
 }
-
+.navbar-default .navbar-toggle {
+    /* border-color: #5BB12F;
+    background-color: rgba(0, 0, 0, 0);     */
+    color: #fff;
+    font-size: 20px;
+    padding: 3px 10px 0;
+}
 
 @media (max-width : 479px) {
     .menu-button {
@@ -261,6 +267,7 @@ li {
 }
 
 @media (max-width : 767px) {
+	.navbar-default{background: #fff}
     .menu-button {
         width: 2em;
         height: 2em;
@@ -276,8 +283,10 @@ li {
         content: '';
     }
 }
-
-
+@media (max-width : 350px) {
+	.navbar-brand{padding:15px 3px;font-size: 16px;}
+	.navbar-toggle{margin-right: 5px;}
+}
 
 .menu-button:hover {
 	opacity: 0.6;
@@ -483,7 +492,8 @@ li {
 }
 
 #main-slide .item img{
-	width: 100%;
+	width: 150%;
+	max-width: 300%
 }
 
 #main-slide .item .slider-content {
@@ -583,9 +593,6 @@ li {
     color: #fff;
     /* font-family: 'Oswald', sans-serif; */
 }
-.carousel-inner{
-    height: 100vh;
-}
 
 #main-slide .slider-content h2.white, #main-slide .slider-content h3.white {
     color: #fff;
@@ -664,6 +671,9 @@ li {
     #main-slide .slider-content h1{
 		font-size: 68px;
 	}
+	.carousel-inner{
+	    height: 100vh;
+	}
 }
 
 
@@ -709,21 +719,17 @@ li {
 		margin-top: 0;
 		font-size: 12px;
 	}
-	#main-slide .carousel-indicators{
-		display: none;
-	}
-    
-    #main-slide .item .slider-content{
-		display: none;
-	}
-    
-    #main-slide .item {
-        height: 400px;
-    }
+	
+    #main-slide .item img{
+    	width: auto;
+	    /* height: 100vh; */
+	    max-width: 300%;
+    }    
+	#main-slide .carousel-control.left, #main-slide .carousel-control.right{display: none}
     
 }
 
-
+/* 
 @media (max-width : 479px) {
     
     #main-slide .item .slider-content{
@@ -735,7 +741,7 @@ li {
     }
     
 }
-
+ */
 
 
 /*------------------------------------------------------ */
@@ -1594,6 +1600,17 @@ footer.style-1 .footer-link li {
     padding: 80px 0;
 }
 
+@media screen  and (max-width: 767px){
+	.call-to-action{
+		background: url(../images/parallax/contact-bg.jpg);
+	    background-size: cover;
+	    background-position: center;
+	    background-attachment: fixed;
+	    background-repeat: no-repeat;
+	    color: #fff;
+	}
+}
+
 .call-to-action h1 {
     font-weight: 300;
     line-height: 50px;
@@ -1617,6 +1634,9 @@ footer.style-1 .footer-link li {
 
 .call-to-action .btn-primary:hover {
     background: #000;color: #FED136;border-bottom: 5px solid #DEB52A;
+}
+.call-to-action .glyphicon{
+	vertical-align: text-bottom;
 }
 
 
