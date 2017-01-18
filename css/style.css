@@ -55,7 +55,7 @@
  
 body {
     overflow-x: hidden;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: 'microsoft jhenghei','Noto Sans TC', sans-serif;
 }
 
 
@@ -172,7 +172,7 @@ li {
 }
 
 .navbar-default .navbar-brand {
-    font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive;
+    /* font-family: "Kaushan Script","Helvetica Neue",Helvetica,Arial,cursive; */
 }
 
 .navbar-default .navbar-collapse {
