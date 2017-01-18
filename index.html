@@ -12,6 +12,32 @@
     <link href="asset/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet" >
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+            google: {
+                families: ['Source Sans Pro']
+            },
+            custom: {
+                families: ['Noto Sans TC', 'Futura']
+            }
+        });
+    </script>
+    <style type="text/css">
+        @font-face {
+            font-family: 'Noto Sans TC';
+            font-style: thin;
+            font-weight: 200;
+            src: url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff2') format('woff2'), url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.woff') format('woff'), url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Thin.otf') format('opentype');
+        }
+        @font-face {
+            font-family: 'Noto Sans TC';
+            font-style: normal;
+            font-weight: 300;
+            src: url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff2') format('woff2'), url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.woff') format('woff'), url('//fonts.gstatic.com/ea/notosanstc/v1/NotoSansTC-Light.otf') format('opentype');
+        }        
+    </style>
     
     <link rel="stylesheet" href="css/owl.carousel.css" >
     <link rel="stylesheet" href="css/owl.theme.css" >
@@ -26,6 +52,7 @@
         if ((host == window.location.host) && (window.location.protocol != "https:"))
             window.location.protocol = "https";
     </script>
+
             
     <!-- Modernizer js -->
     <script src="js/modernizr.custom.js"></script>
