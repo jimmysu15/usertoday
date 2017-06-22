@@ -2,31 +2,38 @@
 body{background:url(../images/galaxy.jpg) fixed}
 *{transition: 500ms all;}
 
-.header{background-color: #FED136}
-.page-title{color:#000;border-bottom:1px dotted #FED136;padding-bottom: 20px;margin:0;padding-top: 20px;}
-.page-title small{font-size:16px;display:block;margin-top:10px;color:#555}
-.fa-user-secret{font-size:90px;float:left;margin-right: 10px;}
-.btn-contact {
-    padding: 5px 15px;float: right;
-    font-size: 20px;color: #000;
-    background: #FED136;letter-spacing: 2px;
-    font-weight: bold;border:0;border-bottom: 5px solid #DEB52A;
-    &:hover {background: #DEB52A;color: #FED136;border-bottom: 5px solid #DEB52A;}
-    .glyphicon{vertical-align: text-bottom;}
-}	
-@media screen and (max-width:600px)	{
-	.page-title{text-align:center}
-	.fa-user-secret{float:none;display:block}
+.header{
+	height:100vh;
+	display:flex;  
+    align-items: center;  
+    justify-content: center;
+    overflow: hidden;	    
 }
-
-.block-title{color:#B4EEF2;font-size:30px;margin:2% 0 1%;}
+.profile-wrap{
+	background-color: #FED136;
+	width: 350px;
+	position: absolute;
+	text-align: center;
+	z-index: 1;
+	opacity:0;margin-top:-100px;
+	animation: profile 1s forwards;
+}
+@keyframes profile{
+	0% {opacity:0;margin-top:-100px;}
+	100% {opacity:1;margin-top:0px;}
+}
+.history-list-wrap{
+	width:100%;height:100vh;	
+	.block-title{
+		color:#fff;display:inline-block;font-size: 50px;
+	}
+}
 .history-list{
-	color:#fff;margin-bottom:5%;
+	color:#fff;margin-bottom:5%;display:inline;line-height: 500%;	
 	>span{
-		margin: 5px 5px 5px 0;
-	    display: block;
-	    font-size: 36px;
-	    opacity: 0.3;
+		margin: 20px 25px;	    
+	    font-size: 50px;
+	    opacity: 0.3;	   
 	}
 	>span:hover{
 		text-shadow:0 0 20px rgba(254,209,54,.8),0 0 20px rgba(254,209,54,.8);
@@ -35,9 +42,38 @@ body{background:url(../images/galaxy.jpg) fixed}
 	}
 }
 
+.profile-title{color:#000;border-bottom:1px dotted #FED136;padding-bottom: 20px;margin:0;padding-top: 20px;}
+.profile-desc{font-size:16px;display:block;margin-top:10px;color:#555}
+.fa-user-secret{font-size:90px;margin-top: 1rem;}
+.block-title{color:#fff;display:inline-block;font-size: 50px;}
+			    
+@media screen and (max-width:1680px){
+	.block-title{font-size:35px;}
+	.history-list{line-height: 400%;}
+	.history-list>span{font-size:35px;margin: 10px 15px;}
+}	
+@media screen and (max-width:1280px){
+	.block-title{font-size:30px;}
+	.header, .history-list-wrap{height:auto;}
+	.history-list{line-height: 300%;}
+	.history-list>span{font-size:30px;margin: 10px 15px;}
+}
+
+@media screen and (max-width:992px){
+	.block-title{font-size:20px;}	
+	.history-list{line-height: 200%;}
+	.history-list>span{font-size:35px;margin: 5px 10px;}
+}
+
+@media screen and (max-width:600px)	{	
+	.header{display:block}
+	.profile-wrap{width:100%;margin:0 auto;position: relative;padding-bottom: 1rem}
+}
+
+.workitem-title{color:#B4EEF2;font-size:20px;margin: 2% 0 1%;padding-bottom: 10px;}
 .workitem, .workitem>a{color:#fff}
 .workitem{	
-	width:100%;
+	width:100%;margin-bottom: 2%;
 	h3{font-size:18px;margin-top: 10px;}
 	>a:hover{text-decoration: none}
 	p{color:#999;margin-bottom: 0;}
@@ -45,13 +81,23 @@ body{background:url(../images/galaxy.jpg) fixed}
 	&:hover h3{text-shadow:0 0 5px rgba(255,255,255,.5);font-weight:bold}
 }
 .cover{max-width: 100%;}
-
-.footer{
-	padding:5% 0;text-shadow:0 1px 1px rgba(254,255,255,.8);font-size:30px;letter-spacing:2px;
-	>a{color:#000;text-decoration:underline}
-	background: #DEB52A;text-align: center;
+@media screen and (max-width:600px)	{	
+	.workitem{margin-bottom:30px}
 }
 
 
+.footer{
+	padding:5% 0;text-shadow:0 1px 1px rgba(254,255,255,.8);font-size:30px;letter-spacing:2px;
+	>a{color:#000;text-decoration:none;border-bottom:1px dotted #222}
+	background: #fff;
+	text-align: center;
+}
 
-
+.btn-contact {
+    padding: 5px 15px;float: right;
+    font-size: 20px;color: #000;
+    background: #FED136;letter-spacing: 2px;
+    font-weight: bold;border:0;border-bottom: 5px solid #DEB52A;
+    &:hover {background: #DEB52A;color: #FED136;border-bottom: 5px solid #DEB52A;}
+    .glyphicon{vertical-align: text-bottom;}
+}	
