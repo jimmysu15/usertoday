@@ -170,5 +170,5 @@ body{background:url(../images/galaxy.jpg) fixed;overflow-x:hidden}
 //     .glyphicon{vertical-align: text-bottom;}
 // }	
 .contact_fixed{
-	position:fixed;bottom:0;width:100%;	
+	position:fixed;bottom:0;width:100%;z-index:3;
 }
